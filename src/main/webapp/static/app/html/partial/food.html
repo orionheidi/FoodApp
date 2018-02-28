@@ -1,0 +1,15 @@
+<div ng-controller="foodController">
+	<form>
+		<div>
+			<label for="name">Name:</label>
+			<input id="name" class="form-control" ng-model="food.name"/>
+
+			<label for="name">Price:</label>
+			<input id="name" class="form-control" ng-model="food.price"/>
+
+			<label>Food Type:</label>
+			<select class="form-control" ng-options="type.name for type in types track by type.id" ng-model="food.type"></select>
+		</div>
+		<button class="btn btn-primary" ng-click="save()">Save</button>
+	</form>
+</div>
